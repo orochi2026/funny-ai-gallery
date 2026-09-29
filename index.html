@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funny AI Gallery</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #0b1020;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      color: #fff;
+    }
+    main { width: min(92vw, 760px); padding: 32px 0 48px; text-align: center; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 6vw, 48px); }
+    p { margin: 0 0 24px; color: #b8c1d9; }
+    .poster {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.45);
+    }
+    .missing {
+      padding: 36px 20px;
+      border: 1px dashed #64748b;
+      border-radius: 18px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Funny AI Gallery</h1>
+    <p>AI 圖片 / 搞笑合成影片收藏</p>
+    <img
+      class="poster"
+      src="assets/kart-poster.png"
+      alt="F22-LIT3 跑跑卡陰車 AI 海報"
+      onerror="this.style.display='none';document.getElementById('missing').style.display='block';"
+    />
+    <div id="missing" class="missing" style="display:none">
+      圖片檔等待上傳：assets/kart-poster.png
+    </div>
+  </main>
+</body>
+</html>
